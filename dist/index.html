@@ -1080,7 +1080,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="dates part --active">
+		<section class="dates part">
 			<div class="container">
 				<div class="dates-wrapp">
 					<div class="dates-coll">
@@ -1158,6 +1158,135 @@
 				</div>
 			</div>
 		</section>
+		<section class="rescue part --active">
+			<div class="container">
+				<div class="part-head">
+					<h3 class="part-title">
+						Часть 5
+					</h3>
+					<p class="part-text">
+						Спасение урожая
+					</p>
+				</div>
+				<div class="rescue-wrapp">
+					<div class="rescue-coll">
+						<div class="rescue-box">
+							<div class="rescue-box-title">
+								Внимание!
+							</div>
+							<div class="rescue-box-text">
+								Анализ записи с дронов показывает нетипичное<br>
+								значение индекса NDVI. Всходы, кажется, чем-то заражены.
+							</div>
+							<div class="rescue-box-subtitle">
+								Задачи
+							</div>
+							<ul class="rescue-list">
+								<li class="rescue-list-inner">
+									Определить болезнь
+								</li>
+								<li class="rescue-list-inner">
+									Выбрать способ обработки
+								</li>
+							</ul>
+						</div>
+						<img src="./img/rescue.png" alt="" class="rescue-img">
+					</div>
+					<div class="rescue-coll-2">
+						<div class="rescue-container">
+							<div class="rescue-container-subtitle">
+								Вероятные заболевания и их симптомы
+							</div>
+							<div class="rescue-container-title">
+								Мучнистая роса
+							</div>
+							<div class="rescue-container-text">
+								На поражённых листьях и стеблях появляется характерный белый <br> паутинистый налёт, похожий на
+								муку
+								или хлопья ваты.
+							</div>
+							<div class="rescue-container-title">
+								Пыльная головня
+							</div>
+							<div class="rescue-container-text">
+								Болезнь разрушает все части колоса. Колосья покрываются черно-<br>коричневой рыхлой массой
+								грибных спор, которая легко разлетается.
+							</div>
+							<div class="rescue-container-title">
+								Стеблевая ржавчина
+							</div>
+							<div class="rescue-container-text">
+								На стеблях появляются продолговатые ржаво-бурые полоски спор.<br>
+								Болезнь проявляется преимущественно на стеблях, листьях.
+							</div>
+						</div>
+		
+						<div class="rescue-row">
+							<div class="rescue-row-title">
+								Выберите подходящую болезнь по описанию симптомов
+							</div>
+							<div class="rescue-row-box">
+								<label class="norms-label">
+									<input type="radio" name="rescue-1" class="norms-label-input">
+									<span class="norms-label-span">
+										Мучнистая роса
+									</span>
+								</label>
+								<label class="norms-label">
+									<input type="radio" name="rescue-1" class="norms-label-input">
+									<span class="norms-label-span">
+										Пыльная головня
+									</span>
+								</label>
+								<label class="norms-label">
+									<input type="radio" name="rescue-1" class="norms-label-input">
+									<span class="norms-label-span">
+										Стеблевая ржавчина
+									</span>
+								</label>
+							</div>
+							<button class="btn norms-row-btn rescue-btn">
+								Подтвердить
+							</button>
+						</div>
+						<div class="rescue-row">
+							<div class="rescue-row-title">
+								Что сейчас поможет посевам?
+							</div>
+							<div class="rescue-row-box">
+								<label class="norms-label">
+									<input type="radio" name="rescue-2" class="norms-label-input">
+									<span class="norms-label-span">
+										Гербициды
+									</span>
+								</label>
+								<label class="norms-label">
+									<input type="radio" name="rescue-2" class="norms-label-input">
+									<span class="norms-label-span">
+										Фунгициды
+									</span>
+								</label>
+								<label class="norms-label">
+									<input type="radio" name="rescue-2" class="norms-label-input">
+									<span class="norms-label-span">
+										Инсектициды
+									</span>
+								</label>
+								<label class="norms-label">
+									<input type="radio" name="rescue-2" class="norms-label-input">
+									<span class="norms-label-span">
+										Протравители
+									</span>
+								</label>
+							</div>
+							<button class="btn norms-row-btn rescue-btn">
+								Подтвердить
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</div>
 	<div class="main-error-box">
 	
@@ -1179,7 +1308,21 @@
 		</button>
 	</div>
 	
-	<div class="modal sort ">
+	<div class="modal sort-modal">
+		<div class="modal-coll">
+			<h3 class="modal-title">
+				Вы спасли урожай от гибели!
+			</h3>
+			<p class="modal-text">
+				Из-за болезни пострадала лишь незначительная часть.
+			</p>
+		</div>
+		<button class="modal-btn">
+			Далее
+		</button>
+	</div>
+	
+	<div class="modal rescue-modal ">
 		<div class="modal-coll">
 			<h3 class="modal-title">
 				Отлично!

@@ -21,30 +21,118 @@
 $(function () {
 
 	let listError = {
-		"cofe-error": {
-			"title": "Это неправильный вариант. ",
-			"text": 'Ориентируйтесь на бюджет и цели бизнеса. На всякий можете заглянуть в справочник',
-		},
-		"catalog-error": {
-			"title": "Это неправильный вариант. ",
-			"text": ' Загляните в справочник, если не получается выбрать правильный ответ.',
-		},
-		"map-error": {
-			"title": "Эта площадка слишком большая и дорогая.",
-			"text": 'Попробуйте выбрать другое место для открытия кофейни.',
-		},
-		"marketing-good-error": {
+		"field-error": {
 			"title": "Ой, это неверный вариант!",
-			"text": ' Если не знаете, что выбрать, можете заглянуть в справочник.',
+			"text": 'Загляните в справочник, если не получается выбрать правильный ответ.',
 		},
-		"unique-good-error": {
-			"title": "У Дмитрия не хватит бюджета,",
-			"text": 'чтобы нанять такого специалиста и купить оборудование для обжарки и фасовки кофейных зёрен. Выберите что-то другое.',
-		},
-		"name-good-error": {
+		"sort-error": {
 			"title": "Ой, это неверный вариант!",
-			"text": 'Так уже называется заведение конкурента.',
+			"text": 'Загляните в справочник, если не получается выбрать правильный ответ.',
 		},
+
+	}
+
+	let listField = {
+		"field-1": {
+			"name": "Поле 42-ПН",
+			"square": '117.5 га',
+			"place": 'Лабинск, Краснодарский край',
+			"weather": '+20°C ',
+			"season": 'Сахарная свёкла',
+			"size": 'field-window',
+			"compare": 'field-error',
+		},
+		"field-2": {
+			"name": "Поле 103-КН",
+			"square": '58.3 га',
+			"place": 'Лабинск, Краснодарский край',
+			"weather": '+20°C ',
+			"season": 'Кукуруза',
+			"size": 'field-window',
+			"compare": 'field-error',
+		},
+		"field-3": {
+			"name": "Поле 140-ЕН",
+			"square": '57.8 га',
+			"place": 'Лабинск, Краснодарский край',
+			"weather": '+20°C ',
+			"season": 'Чистый пар',
+			"size": 'field-window',
+			"compare": 'field-window',
+		},
+		"field-4": {
+			"name": "Поле 84-ЛА",
+			"square": '88.5 га',
+			"place": 'Лабинск, Краснодарский край',
+			"weather": '+20°C',
+			"season": 'Озимая пшеница',
+			"size": 'field-window',
+			"compare": 'field-error',
+		},
+		"field-5": {
+			"name": "Поле 123-КР",
+			"square": '42.8 га',
+			"place": 'Лабинск, Краснодарский край',
+			"weather": '+20°C ',
+			"season": 'Кукуруза',
+			"size": 'field-window',
+			"compare": 'field-error',
+		},
+		"field-6": {
+			"name": "Поле 112-ЕН",
+			"square": '52.7 га',
+			"place": 'Лабинск, Краснодарский край',
+			"weather": '+20°C ',
+			"season": 'Озимая пшеница',
+			"size": 'field-window',
+			"compare": 'field-error',
+		},
+		"field-7": {
+			"name": "Поле 113-РЗ",
+			"square": '58.2 га',
+			"place": 'Лабинск, Краснодарский край',
+			"weather": '+20°C ',
+			"season": 'Соя',
+			"size": 'field-window',
+			"compare": 'field-error',
+		},
+		"field-8": {
+			"name": "Поле 190-РС",
+			"square": '110.3 га',
+			"place": 'Лабинск, Краснодарский край',
+			"weather": '+20°C ',
+			"season": 'Сахарная свёкла',
+			"size": 'field-window',
+			"compare": 'field-error',
+		},
+		"field-9": {
+			"name": "Поле 52-ЯН",
+			"square": '81.36 га',
+			"place": 'Лабинск, Краснодарский край',
+			"weather": '+20°C ',
+			"season": 'Соя',
+			"size": 'field-window',
+			"compare": 'field-error',
+		},
+		"field-10": {
+			"name": "Поле 30-КУ",
+			"square": '89.41 га',
+			"place": 'Лабинск, Краснодарский край',
+			"weather": '+20°C',
+			"season": 'Кукуруза',
+			"size": 'field-window',
+			"compare": 'field-error',
+		},
+		"field-11": {
+			"name": "Поле 137-АЛ",
+			"square": '63.2 га',
+			"place": 'Лабинск, Краснодарский край',
+			"weather": '+20°C ',
+			"season": 'Чистый пар',
+			"size": 'field-window',
+			"compare": 'field-window',
+		},
+
 	}
 
 
@@ -148,7 +236,7 @@ $(function () {
 			const swiper = new Swiper('.sort-swiper', {
 
 				direction: 'horizontal',
-				loop: false,
+				loop: true,
 				spaceBetween: 40,
 				initialSlide: 1,
 				autoHeight: true,
@@ -163,4 +251,235 @@ $(function () {
 		}
 	}
 	swiperSlaider()
+
+	// start
+	function start() {
+		const startBtn = document.querySelector('.main-btn');
+		const main = document.querySelector('.main')
+		startBtn.addEventListener('click', () => {
+			let dataArr = startBtn.getAttribute('data-part');
+			let id = document.getElementById(dataArr);
+			timer();
+			main.classList.remove('--active');
+			id.classList.add('--active');
+		})
+	}
+	start()
+
+	// выбор поля
+	function field() {
+		const btn = document.querySelectorAll('.field-box-btn');
+		const fieldMarkImg = document.querySelectorAll('.field-mark-img');
+		let fieldBoxInfo = document.querySelector('.field-box-info');
+		btn.forEach(item => {
+			item.addEventListener('click', () => {
+				let counter = document.querySelectorAll('.--good').length;
+				let dataArr = item.getAttribute('data-field');
+				let id = document.getElementById(`${dataArr}-mark`);
+				btn.forEach(even => {
+					if (!even.classList.contains('--good') || !even.classList.contains('--error')) {
+						if (even.classList.contains('--active')) {
+							even.classList.remove('--active')
+						}
+					}
+
+				})
+				fieldMarkImg.forEach(even => {
+					if (!even.classList.contains('--id')) {
+						if (even.classList.contains('--active')) {
+							even.classList.remove('--active')
+						}
+					}
+
+				})
+				id.classList.add('--active');
+				item.classList.add('--active');
+
+				let name = listField[`${dataArr}`]['name'];
+				let square = listField[`${dataArr}`]['square'];
+				let place = listField[`${dataArr}`]['place'];
+				let weather = listField[`${dataArr}`]['weather'];
+				let season = listField[`${dataArr}`]['season'];
+				let size = listField[`${dataArr}`]['size'];
+				let compare = listField[`${dataArr}`]['compare'];
+				let element = document.createElement("div");
+
+				element.classList.add('field-box-info-container');
+				element.innerHTML = `
+				<div class="field-head">
+				<div class="field-name">
+					 ${name}
+				</div>
+					<button class="field-indo-btn btn" data-size="${size}" data-compare="${compare}">
+						Посадить здесь
+					</button>
+				</div>
+				<div class="field-body">
+				<div class="fiedl-body-coll">
+					<div class="field-body-title">
+						Площадь:
+					</div>
+					<div class="field-body-text">
+                    ${square}
+					</div>
+				</div>
+				<div class="fiedl-body-coll-2">
+					<div class="field-body-title">
+						Место:
+					</div>
+					<div class="field-body-text">
+                    ${place}
+					</div>
+				</div>
+				</div>
+				<div class="field-body">
+					<div class="fiedl-body-coll">
+						<div class="field-body-title">
+							Погода:
+						</div>
+						<div class="field-body-text">
+						${weather}
+						</div>
+					</div>
+					<div class="fiedl-body-coll-2">
+						<div class="field-body-title">
+							В прошлом сезоне:
+						</div>
+						<div class="field-body-text">
+						${season}
+						</div>
+					</div>
+				</div>
+				`
+				fieldBoxInfo.innerHTML = '';
+				fieldBoxInfo.appendChild(element);
+				fieldExamination(item, dataArr, fieldMarkImg, counter, name);
+
+			})
+		})
+	};
+
+	field()
+
+	function fieldExamination(button, idMark, itmeBtn, counter, name) {
+		let btn = document.querySelector('.field-indo-btn');
+		btn.addEventListener('click', () => {
+			let dataSize = btn.getAttribute('data-size');
+			let dataCompare = btn.getAttribute('data-compare');
+			itmeBtn.forEach(even => {
+				if (!even.classList.contains('--id')) {
+					if (even.classList.contains('--active')) {
+						even.classList.remove('--active')
+					}
+				}
+
+			})
+			if (dataSize === dataCompare) {
+				let id = document.getElementById(`${idMark}-mark`);
+				button.classList.add('--good');
+				id.classList.add('--id');
+				id.classList.add('--active');
+
+				let elementTwo = document.createElement("div");
+				elementTwo.classList.add('field-select--container');
+				elementTwo.innerHTML = `
+				<div class="field-select-box">
+					<svg width="18" height="21" viewBox="0 0 18 21" fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd"
+					d="M8.53975 20.351C8.56995 20.3685 8.59369 20.3821 8.6105 20.3915L8.63843 20.4071C8.8613 20.5294 9.13776 20.5285 9.36084 20.4075L9.3895 20.3915C9.40631 20.3821 9.43005 20.3685 9.46025 20.351C9.52066 20.316 9.60697 20.265 9.7155 20.1982C9.93246 20.0646 10.2388 19.8676 10.6046 19.6091C11.3351 19.0931 12.3097 18.3274 13.2865 17.3273C15.2307 15.3368 17.25 12.3462 17.25 8.5C17.25 3.94365 13.5563 0.25 9 0.25C4.44365 0.25 0.75 3.94365 0.75 8.5C0.75 12.3462 2.76932 15.3368 4.71346 17.3273C5.69025 18.3274 6.66491 19.0931 7.39539 19.6091C7.76125 19.8676 8.06754 20.0646 8.2845 20.1982C8.39303 20.265 8.47934 20.316 8.53975 20.351ZM9 11.5C10.6569 11.5 12 10.1569 12 8.5C12 6.84315 10.6569 5.5 9 5.5C7.34315 5.5 6 6.84315 6 8.5C6 10.1569 7.34315 11.5 9 11.5Z"
+					fill="#E98223" />
+					</svg>
+					${name}
+				</div>
+				`
+				let fieldSelectText = document.querySelector('.field-select-text');
+				let fieldSelectRow = document.querySelectorAll('.field-select-row');
+				let fieldSelectId = document.getElementById('field-select-row-1');
+				let fieldSelectIdTwo = document.getElementById('field-select-row-2');
+				if (fieldSelectText) {
+					fieldSelectText.remove();
+				}
+				fieldSelectRow.forEach(item => {
+					if (item.classList.contains('--deacitve')) {
+						item.classList.remove('--deacitve')
+					}
+				})
+				if (counter == 0) {
+					fieldSelectId.appendChild(elementTwo);
+				}
+				if (counter == 1) {
+					let idWindow = document.getElementById(dataSize);
+					let field = document.querySelector('.field');
+					field.classList.add('-deactive');
+
+					fieldSelectIdTwo.innerHTML = '';
+					fieldSelectIdTwo.appendChild(elementTwo);
+
+					setTimeout(() => {
+						idWindow.classList.add('--active');
+					}, 1000);
+
+				}
+			} else {
+				let id = document.getElementById(`${idMark}-error`);
+				button.classList.add('--error');
+				id.classList.add('--id');
+				id.classList.add('--active');
+				buttonError(listError[`${dataCompare}`]['title'], listError[`${dataCompare}`]['text'])
+
+			}
+
+
+		})
+	}
+	// закрытие окна и переход на следующий этап
+	function closeWindows() {
+		let btn = document.querySelectorAll('.modal-btn');
+		let modal = document.querySelectorAll('.modal');
+		let part = document.querySelectorAll('.part');
+		btn.forEach(item => {
+			item.addEventListener('click', () => {
+				let dataArr = item.getAttribute('data-open');
+				let id = document.getElementById(dataArr);
+				modal.forEach(event => {
+					if (event.classList.contains('--active')) {
+						event.classList.remove('--active')
+					}
+				})
+				part.forEach(e => {
+					if (e.classList.contains('--active')) {
+						e.classList.remove('--active')
+					}
+				})
+				deletStatError()
+				id.classList.add('--active');
+			})
+		})
+	}
+	closeWindows()
+
+	// sort
+	function sort() {
+		let btn = document.querySelectorAll('.sort-box-btn');
+		btn.forEach(item => {
+			item.addEventListener('click', () => {
+				let dataSize = item.getAttribute('data-size');
+				let dataCompare = item.getAttribute('data-compare');
+				if (dataSize === dataCompare) {
+					let id = document.getElementById(dataSize);
+					let block = document.getElementById(`${dataSize}-block`)
+					block.classList.add('-deactive');
+					setTimeout(() => {
+						id.classList.add('--active');
+					}, 1000);
+				} else {
+					item.innerHTML = 'Этот сорт не подходит';
+					item.classList.add('--deacitve')
+					buttonError(listError[`${dataCompare}`]['title'], listError[`${dataCompare}`]['text'])
+				}
+			})
+		})
+	}
+	sort();
 })

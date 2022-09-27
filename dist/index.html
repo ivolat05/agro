@@ -97,7 +97,7 @@
 				</div>
 			</div>
 		</header>
-		<main class="main --active">
+		<main class="main ">
 			<div class="container">
 				<div class="main-wrapp">
 					<div class="main-box">
@@ -113,14 +113,14 @@
 							результатов, но и беречь ресурсы почвы. Например, в некоторые сезоны в Краснодарском крае пшеницей
 							засевают более 1,6 млн гектаров. Это как половина озера Байкал или вся Калининградская область!
 						</p>
-						<button class="main-btn">
+						<button class="main-btn" data-part="field">
 							Заводим комбайны и поехали!
 						</button>
 					</div>
 				</div>
 			</div>
 		</main>
-		<section class="field part">
+		<section class="field part ">
 			<div class="container">
 				<div class="field-wrapp">
 					<div class="field-coll">
@@ -133,6 +133,29 @@
 							</h3>
 						</div>
 						<div class="field-box">
+							<img id="field-1-mark" src="./img/mark.svg" alt="" class="field-mark-img  field-mark-img-1">
+							<img id="field-2-mark" src="./img/mark.svg" alt="" class="field-mark-img field-mark-img-2">
+							<img id="field-3-mark" src="./img/mark.svg" alt="" class="field-mark-img field-mark-img-3">
+							<img id="field-4-mark" src="./img/mark.svg" alt="" class="field-mark-img field-mark-img-4">
+							<img id="field-5-mark" src="./img/mark.svg" alt="" class="field-mark-img field-mark-img-5">
+							<img id="field-6-mark" src="./img/mark.svg" alt="" class="field-mark-img field-mark-img-6">
+							<img id="field-11-mark" src="./img/mark.svg" alt="" class="field-mark-img field-mark-img-7">
+							<img id="field-7-mark" src="./img/mark.svg" alt="" class="field-mark-img field-mark-img-8">
+							<img id="field-8-mark" src="./img/mark.svg" alt="" class="field-mark-img field-mark-img-9">
+							<img id="field-9-mark" src="./img/mark.svg" alt="" class="field-mark-img field-mark-img-10">
+							<img id="field-10-mark" src="./img/mark.svg" alt="" class="field-mark-img field-mark-img-11">
+		
+							<img id="field-1-error" src="./img/mark-error.svg" alt="" class="field-mark-img  field-mark-img-1">
+							<img id="field-2-error" src="./img/mark-error.svg" alt="" class="field-mark-img field-mark-img-2">
+							<img id="field-3-error" src="./img/mark-error.svg" alt="" class="field-mark-img field-mark-img-3">
+							<img id="field-4-error" src="./img/mark-error.svg" alt="" class="field-mark-img field-mark-img-4">
+							<img id="field-5-error" src="./img/mark-error.svg" alt="" class="field-mark-img field-mark-img-5">
+							<img id="field-6-error" src="./img/mark-error.svg" alt="" class="field-mark-img field-mark-img-6">
+							<img id="field-11-error" src="./img/mark-error.svg" alt="" class="field-mark-img field-mark-img-7">
+							<img id="field-7-error" src="./img/mark-error.svg" alt="" class="field-mark-img field-mark-img-8">
+							<img id="field-8-error" src="./img/mark-error.svg" alt="" class="field-mark-img field-mark-img-9">
+							<img id="field-9-error" src="./img/mark-error.svg" alt="" class="field-mark-img field-mark-img-10">
+							<img id="field-10-error" src="./img/mark-error.svg" alt="" class="field-mark-img field-mark-img-11">
 							<svg class="field-box-svg" width="737" height="319" viewBox="0 0 737 319" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
 								<g clip-path="url(#clip0_1_1643)">
@@ -394,55 +417,10 @@
 							</svg>
 		
 						</div>
-						<div class="field-box-info --deactive">
+						<div class="field-box-info">
 							Нажмите на поле, чтобы узнать информацию о нём
 						</div>
-						<div class="field-box-info">
-							<div class="field-head">
-								<div class="field-name">
-									Поле 137-АЛ
-								</div>
-								<button class="field-indo-btn btn">
-									Посадить здесь
-								</button>
-							</div>
-							<div class="field-body">
-								<div class="fiedl-body-coll	">
-									<div class="field-body-title">
-										Площадь:
-									</div>
-									<div class="field-body-text">
-										63.2 га
-									</div>
-								</div>
-								<div class="fiedl-body-coll-2	">
-									<div class="field-body-title">
-										Место:
-									</div>
-									<div class="field-body-text">
-										Лабинск, Краснодарский край
-									</div>
-								</div>
-							</div>
-							<div class="field-body">
-								<div class="fiedl-body-coll	">
-									<div class="field-body-title">
-										Погода:
-									</div>
-									<div class="field-body-text">
-										+20°C
-									</div>
-								</div>
-								<div class="fiedl-body-coll-2	">
-									<div class="field-body-title">
-										В прошлом сезоне:
-									</div>
-									<div class="field-body-text">
-										Соя
-									</div>
-								</div>
-							</div>
-						</div>
+		
 					</div>
 					<div class="field-coll-2">
 						<div class="field-task">
@@ -508,30 +486,18 @@
 							</div>
 						</div>
 		
-						<div class="field-select --deacitve">
-							<div class="field-select-title">
+		
+						<div class="field-select ">
+							<div class="field-subtitle">
 								Выбранные поля
 							</div>
 							<div class="field-select-text">
 								Вы еще не выбрали ни одного поля
 							</div>
-						</div>
-						<div class="field-select ">
-							<div class="field-subtitle">
-								Выбранные поля
+							<div id="field-select-row-1" class="field-select-row --deacitve">
+		
 							</div>
-							<div class="field-select-row">
-								<div class="field-select-box">
-									<svg width="18" height="21" viewBox="0 0 18 21" fill="none"
-										xmlns="http://www.w3.org/2000/svg">
-										<path fill-rule="evenodd" clip-rule="evenodd"
-											d="M8.53975 20.351C8.56995 20.3685 8.59369 20.3821 8.6105 20.3915L8.63843 20.4071C8.8613 20.5294 9.13776 20.5285 9.36084 20.4075L9.3895 20.3915C9.40631 20.3821 9.43005 20.3685 9.46025 20.351C9.52066 20.316 9.60697 20.265 9.7155 20.1982C9.93246 20.0646 10.2388 19.8676 10.6046 19.6091C11.3351 19.0931 12.3097 18.3274 13.2865 17.3273C15.2307 15.3368 17.25 12.3462 17.25 8.5C17.25 3.94365 13.5563 0.25 9 0.25C4.44365 0.25 0.75 3.94365 0.75 8.5C0.75 12.3462 2.76932 15.3368 4.71346 17.3273C5.69025 18.3274 6.66491 19.0931 7.39539 19.6091C7.76125 19.8676 8.06754 20.0646 8.2845 20.1982C8.39303 20.265 8.47934 20.316 8.53975 20.351ZM9 11.5C10.6569 11.5 12 10.1569 12 8.5C12 6.84315 10.6569 5.5 9 5.5C7.34315 5.5 6 6.84315 6 8.5C6 10.1569 7.34315 11.5 9 11.5Z"
-											fill="#E98223" />
-									</svg>
-									Поле 137-АЛ
-								</div>
-							</div>
-							<div class="field-select-row">
+							<div id="field-select-row-2" class="field-select-row  --deacitve">
 								Выберите еще одно поле
 							</div>
 						</div>
@@ -541,7 +507,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="sort part">
+		<section id="sort-good-block" class="sort part ">
 			<div class="container">
 				<div class="sort-head">
 					<div class="sort-head-coll">
@@ -641,7 +607,7 @@
 									</div>
 									<div class="sort-box-coll-2">
 		
-										<button class="btn sort-box-btn">
+										<button class="btn sort-box-btn" data-size="sort-good" data-compare="sort-error">
 											Выбрать этот сорт
 										</button>
 										<img src="./img/sort/sort-2.png" alt="" class="sort-img">
@@ -724,7 +690,7 @@
 									</div>
 									<div class="sort-box-coll-2">
 		
-										<button class="btn sort-box-btn">
+										<button class="btn sort-box-btn" data-size="sort-good" data-compare="sort-good">
 											Выбрать этот сорт
 										</button>
 										<img src="./img/sort/sort-1.png" alt="" class="sort-img">
@@ -805,7 +771,7 @@
 									</div>
 									<div class="sort-box-coll-2">
 		
-										<button class="btn sort-box-btn">
+										<button class="btn sort-box-btn" data-size="sort-good" data-compare="sort-error">
 											Выбрать этот сорт
 										</button>
 										<img src="./img/sort/sort-3.png" alt="" class="sort-img">
@@ -885,7 +851,7 @@
 									</div>
 									<div class="sort-box-coll-2">
 		
-										<button class="btn sort-box-btn">
+										<button class="btn sort-box-btn" data-size="sort-good" data-compare="sort-error">
 											Выбрать этот сорт
 										</button>
 										<img src="./img/sort/sort-4.png" alt="" class="sort-img">
@@ -915,7 +881,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="norms part">
+		<section id="norms-block" class="norms part --active">
 			<div class="container">
 				<div class="part-head">
 					<h3 class="part-title">
@@ -1434,7 +1400,7 @@
 	<div id="popup" class="popup mfp-hide">
 	
 	</div>
-	<div class="modal">
+	<div id="field-window" class="modal">
 		<div class="modal-coll">
 			<h3 class="modal-title">
 				Отлично!
@@ -1443,12 +1409,12 @@
 				Поля определены, теперь приступим к выбору <br> озимой пшеницы.
 			</p>
 		</div>
-		<button class="modal-btn">
+		<button class="modal-btn" data-open="sort-good-block">
 			Открыть каталог сортов
 		</button>
 	</div>
 	
-	<div class="modal sort-modal">
+	<div id="sort-good" class="modal sort-modal">
 		<div class="modal-coll">
 			<h3 class="modal-title">
 				Вы спасли урожай от гибели!
@@ -1457,7 +1423,7 @@
 				Из-за болезни пострадала лишь незначительная часть.
 			</p>
 		</div>
-		<button class="modal-btn">
+		<button class="modal-btn" data-open="norms-block">
 			Далее
 		</button>
 	</div>
